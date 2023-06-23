@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Detailed Metric</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="requestResponseStyle.css">
+  <script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script src="charts.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="logout.html" class="right">Logout</a>
+  </div>
+
+  <script>
+    renderBarChart();
+    renderBoxPlotChart();
+    updateSummaryMetrics();
+  </script>
+
+  <div class="data-description">
+    <h2>Data and Metric Description</h2>
+    <p>The charts and grid presented give an overview of the request and response times from all users.
+      In the bar chart, we can see the difference between when users initiate a request and when they receive
+      a response. The box plot provides a visualization of the range for request, response, and the difference
+      between request and response. The grid displays each unique user and provides quantitative measurements
+      for request and response time. This metric is important because it shows how users are experiencing the
+      content being delivered on the webpage. Performance improvements can be made to speed up the website's
+      responsiveness and serve more users efficiently if it is evident that a majority of users are experiencing
+      delays.</p>
+  </div>
+
+  <div class="summary-container">
+    <h2>Metrics Summary</h2>
+    <div class="summary-item">
+      <span class="summary-label">Total Requests:</span>
+      <span id="total-requests"></span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Average Response Time:</span>
+      <span id="avg-response-time"></span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Minimum Response Time:</span>
+      <span id="min-response-time"></span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">Maximum Response Time:</span>
+      <span id="max-response-time"></span>
+    </div>
+  </div>
+
+  <div class="chart-container" id="bar-chart-container"></div>
+  <div class="chart-container" id="boxplot-chart-container"></div>
+
+  <zing-grid src="https://cse135kehu.site/api/performance" caption="Request and Response Data" columns-control
+    column-drag layout-controls pager page-size="5" page-size-options="5,10,15">
+    <zg-column index="id" header="User ID"></zg-column>
+    <zg-column index="requestStart" header="Request Start (ms)"></zg-column>
+    <zg-column index="responseEnd" header="Response End (ms)"></zg-column>
+  </zing-grid>
+
+</body>
+
+</html>

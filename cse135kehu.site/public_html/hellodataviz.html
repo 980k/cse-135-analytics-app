@@ -1,0 +1,30 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Visualization</title>
+  <!-- Include the ZingChart library -->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+
+<body>
+  <div id="bar-chart-container"></div>
+  <div id="line-chart-container"></div>
+  <div id="pie-chart-container"></div>
+
+  <!-- Include the JavaScript file -->
+  <script src="charts.js"></script>
+
+  <!-- Call the renderChart function to generate and render the chart -->
+  <script>
+    renderBarChart();
+    renderLineChart();
+    renderPieChart();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+/* Style for the ZingGrid component */
+zing-grid {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+zg-caption {
+    background-color: #2255DD;
+    color: white;
+    font-weight: bold;
+    opacity: 0.8;
+    text-align: center;
+    transition: 0.3s opacity;
+    font-size: 2rem;
+}
+
+zg-head {
+    color: #4A94EC;
+}
+
+zg-caption:hover {
+    opacity: 1;
+}
+
+zg-body zg-row:nth-child(odd) {
+    background-color: #E5ECF5;
+}

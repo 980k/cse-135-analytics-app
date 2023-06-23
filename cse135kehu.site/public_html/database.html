@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Data</title>
+    <script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
+    <style>
+        /* Style for the ZingGrid component */
+        zing-grid {
+            width: 100%;
+            height: 400px;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        
+        /* Style for the grid title */
+        zing-grid::part(title) {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+        
+        /* Limit the number of rows displayed */
+        zing-grid::part(row) {
+            height: 40px; /* Set the height of each row */
+        }
+    </style>
+</head>
+<body>
+    <zing-grid src="https://cse135kehu.site/api/static" caption="User Static Data" columns-control column-drag layout-controls pager page-size="5" page-size-options="5,10,15"></zing-grid>
+    <zing-grid src="https://cse135kehu.site/api/performance" caption="User Performance Data" columns-control column-drag layout-controls pager page-size="5" page-size-options="5,10,15"></zing-grid>
+    <zing-grid src="https://cse135kehu.site/api/activity" caption="User Activity Data" columns-control column-drag layout-controls pager page-size="5" page-size-options="5,10,15"></zing-grid>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+#quarter {
+    margin-top: -15px;
+}
+
+#team {
+    background-color: #f2f2f2;
+    border: 1px solid #000000;
+    float: right;
+    margin-top: -45px;
+    padding: 10px;
+}
+
+#assignments {
+    margin-top: 200px;
+}
+
+#assignments ul,
+#assignments p {
+    background-color: #f2f2f2;
+}
+
+
+.homework-two-contents {
+	background-color: #f2f2f2;
+}
+
+.homework-two-contents ul {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+    margin-right: 190px;
+    margin-left: 20px;
+}
+
+.homework-two-contents p {
+    margin-left: -15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* .list-container li {
+	margin-left: 100px;
+} */

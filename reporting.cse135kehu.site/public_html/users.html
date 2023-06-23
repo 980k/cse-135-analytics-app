@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>User Management</title>
+    <link rel="stylesheet" type="text/css" href="users.css">
+    <script src="users.js"></script>
+    <script src="./node_modules/jwt-decode/build/jwt-decode.js"></script>
+    <script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="logout.html" class="right">Logout</a>
+    </div>
+
+    <zing-grid idKey="_id" src="https://reporting.cse135kehu.site/api/user" caption="CRUD Endpoint"
+        params='{"idKey":"_id"}' columns-control column-drag layout-controls pager page-size="5"
+        page-size-options="5,10,15" editor editor-controls>
+        <zg-column index="_id" header="id"></zg-column>
+        <zg-column index="username" header="Username"></zg-column>
+        <zg-column index="email" header="Email"></zg-column>
+        <zg-column index="password" header="Password"></zg-column>
+        <zg-column index="isAdmin" header="Admin"></zg-column>
+    </zing-grid>
+</body>
+
+</html>

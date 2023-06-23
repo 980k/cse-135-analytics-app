@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>Login Form</header>
+        
+        <form class="login-form" id="login" action="#">
+            <div class="login-form">
+                <label for="name">Username/Email: </label>
+                <input type="text" name="usernameEmail" id="usernameEmail" required>
+            </div>
+            <div class="login-form">
+                <label for="email">Password: </label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="login-form">
+                <input type="submit" value="Login!">
+            </div>
+        </form>
+        <div class="error" id="error-text"></div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="./node_modules/jwt-decode/build/jwt-decode.js"></script>
+
+</body>
+
+</html>

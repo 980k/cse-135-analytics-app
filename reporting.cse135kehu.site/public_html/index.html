@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script src="charts.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="logout.html" class="right">Logout</a>
+  </div>
+
+  <script>
+    renderBarChart();
+    renderScatterChart();
+  </script>
+
+  <a id="detailed-report" href="requestResponse.html">Generate Detailed Report &rarr;</a>
+  <div class="chart-container" id="bar-chart-container"></div>
+  <div class="chart-container" id="scatter-chart-container"></div>
+
+  <div class="clear"></div>
+
+  <zing-grid src="https://cse135kehu.site/api/performance" caption="User Performance Data" columns-control column-drag
+    layout-controls pager page-size="5" page-size-options="5,10,15"></zing-grid>
+
+</body>
+
+</html>
